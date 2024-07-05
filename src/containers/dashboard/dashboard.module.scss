@@ -1,0 +1,319 @@
+@import '../../styles/responsiveness.scss';
+
+.dashboard {
+    position: relative;
+    top: 70px;
+    z-index: 0;
+
+    &__heading {
+        font-size: 18px;
+        font-weight: 500;
+        color: #1F384C;
+        margin-bottom: 40px;
+    }
+
+    &__firstSection {
+        display: flex;
+        align-items: start;
+        border-bottom: 0.5px solid #C8CBD9;
+
+        @include sm {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        @include lg {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+    }
+
+    &__revenue {
+        flex: 2;
+        border-right: 0.5px solid #C8CBD9;
+        padding: 0 40px 40px 0px;
+
+        @include sm {
+            border-right: unset;
+            flex: unset;
+            padding: 20px;
+            width: 90%;
+        }
+
+        @include mini {
+            padding: 10px;
+            width: 100%;
+        }
+
+        @include lg {
+            flex: unset;
+            width: 100%;
+            border-right: unset;
+            padding: unset;
+        }
+    }
+
+    &__doughnut {
+        padding: 0 40px 40px 40px;
+        flex: 1;
+
+        .apexcharts-legend {
+            display: flex !important;
+            justify-content: space-between !important;
+            text-align: center !important;
+        }
+
+        @include sm {
+            padding: 20px;
+        }
+
+        @include mini {
+            padding: 10px;
+            width: 100%;
+        }
+
+        @include lg {
+            width: 100%;
+            padding: unset;
+        }
+    }
+
+    &__secondSection {
+        display: flex;
+        width: 100%;
+
+        @include sm {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        @include lg {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &__item {
+            border-right: 0.5px solid #C8CBD9;
+            flex: 1;
+            width: 100%;
+
+            &:last-child {
+                flex: 1.17;
+                border-right: unset;
+            }
+
+            @include sm {
+                border-right: unset;
+                margin: 10px 0;
+            }
+
+            @include mini {
+                margin: 5px 0;
+            }
+
+
+            @include lg {
+                flex: unset;
+                width: 100%;
+                border-right: unset;
+            }
+        }
+    }
+}
+
+.chartContainer {
+    &__textContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+
+        &__heading {
+            font-size: 14px;
+            line-height: 22px;
+            margin-bottom: 8px;
+            font-weight: 400;
+
+            @include sm {
+                font-size: 12px;
+            }
+
+            @include mini {
+                font-size: 10px;
+            }
+        }
+
+        &__idr {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 28px;
+            margin-bottom: 10px;
+
+            @include sm {
+                font-size: 18px;
+            }
+
+            @include mini {
+                font-size: 16px;
+            }
+        }
+
+        &__percentage {
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 12px;
+            display: flex;
+            align-items: center;
+            gap: 2px;
+
+            span {
+                color: #32D16D;
+                font-weight: 400;
+                opacity: unset;
+                display: flex;
+                align-items: center;
+
+                svg {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+
+    &__chartHeader {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 21px;
+        margin-top: 24px;
+        opacity: 50%;
+
+        @include sm {
+            font-size: 12px;
+        }
+
+        @include mini {
+            font-size: 10px;
+        }
+    }
+}
+
+.reportButton {
+    box-shadow: 0px 2px 1px 0px #4048520D;
+    border: 0.5px solid #DDE4F0;
+    background-color: #FBFCFE;
+    color: #5A6ACF;
+    outline: none;
+    padding: 6px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    @include sm {
+        padding: 4px 12px;
+    }
+
+    @include mini {
+        padding: 2px 8px;
+    }
+}
+
+.orderTime {
+    margin-bottom: 50px;
+
+    &__header {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 21px;
+        margin-bottom: 8px;
+
+        @include sm {
+            font-size: 12px;
+        }
+
+        @include mini {
+            font-size: 10px;
+        }
+    }
+}
+
+.rating_container {
+    padding: 40px 40px 40px 0;
+}
+
+.circles_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.grouped_circles {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 0;
+}
+
+.blue_circle {
+    margin-top: -50px;
+    margin-left: -142px;
+    opacity: 90%;
+}
+
+.mostOrdered {
+    padding: 40px 20px;
+
+
+    &__list {
+        margin-top: 50px;
+    }
+
+    &__listItem {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 0.5px solid #DBE5EB;
+        padding-bottom: 16px;
+        margin-top: 20px;
+
+        p {
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: 400;
+        }
+
+        &__price {
+            opacity: 70%;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+}
+
+.chartContainer {
+    padding: 40px;
+
+    @include lg {
+        padding: unset;
+    }
+}

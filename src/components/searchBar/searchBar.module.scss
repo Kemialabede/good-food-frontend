@@ -1,0 +1,26 @@
+@import '.././../styles/responsiveness.scss';
+
+.search_container {
+    background-color: #F6F6FB;
+    display: flex;
+    align-items: center;
+    max-width: 595px;
+    padding: 8.2px 15px;
+    border-radius: 5px;
+    gap: 10px;
+
+    @include sm {
+        max-width: 280px;
+    }
+
+    input {
+        width: 100%;
+        background-color: #F6F6FB;
+        outline: none;
+        border: none;
+    }
+
+    &__icon {
+        color: #627B87;
+    }
+}

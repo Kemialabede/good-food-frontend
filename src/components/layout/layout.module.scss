@@ -1,0 +1,60 @@
+@import '../../styles/responsiveness.scss';
+
+.layout_container {
+    display: flex;
+    flex-direction: column;
+
+    @include sm {
+        flex-direction: column;
+    }
+
+    &__sidebar {
+        position: fixed;
+        width: 240px;
+
+        @include sm {
+            position: relative;
+            width: 100%;
+        }
+    }
+
+    &__content {
+        position: relative;
+        width: calc(100% - 240px);
+        left: 240px;
+
+        @include bigscreen {
+            width: calc(100% - 240px);
+        }
+
+        @include min {
+            left: unset;
+            width: 100%;
+            padding-left: 0;
+        }
+
+        @include sm {
+            left: unset;
+            width: 100%;
+            padding-left: 0;
+        }
+
+        @include md {
+            padding-left: 0;
+        }
+
+        @include lg {
+            left: unset;
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+}
+
+.layout_children {
+    padding: 40px;
+
+    @include sm {
+        padding: 20px;
+    }
+}

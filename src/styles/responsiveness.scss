@@ -1,0 +1,60 @@
+$mini: 280px;
+$sm: 480px;
+$md: 767px;
+$min: 920px;
+$lg: 1024px;
+$xl: 1200px;
+$xxl: 1440px;
+
+@mixin mini {
+    @media screen and (max-width: ($mini )) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media screen and (max-width: ($sm)) {
+        @content;
+    }
+
+}
+
+@mixin md {
+    @media screen and (max-width: ($md)) {
+        @content;
+    }
+}
+
+@mixin min {
+    @media screen and (max-width: ($min)) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media screen and (max-width: ($lg)) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media screen and (max-width: ($xl)) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media screen and (max-width: ($xxl)) {
+        @content;
+    }
+}
+
+@mixin bigscreen {
+    @media screen and (min-width: (1441px)) {
+        @content;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    /* CSS rules here */
+}
