@@ -42,6 +42,8 @@ const Rating = () => {
             color={ratings[0].color}
             size={ratings[0].size}
             label={ratings[0].label}
+            innerHeight="90px"
+            innerWidth="90px"
           />
           <CircularProgressBar
             percentage={ratings[1].percentage}
@@ -49,6 +51,8 @@ const Rating = () => {
             size={ratings[1].size}
             label={ratings[1].label}
             style={{ margin: '20px 0 0 -10px' }}
+            innerHeight="170px"
+            innerWidth="170px"
           />
         </div>
         <CircularProgressBar
@@ -56,6 +60,8 @@ const Rating = () => {
           color={ratings[2].color}
           size={ratings[2].size}
           label={ratings[2].label}
+          innerHeight="110px"
+          innerWidth="110px"
         />
       </div>
     </div>

@@ -121,7 +121,7 @@ const OrderTime = () => {
   const series = [40, 32, 28];
 
   return (
-    <div style={{ position: 'relative' }}>
+    <div style={{ position: 'relative' }} className="chartContainer">
       <div
         className={classNames(
           styles.chartContainer__textContainer,

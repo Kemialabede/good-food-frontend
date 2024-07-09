@@ -13,3 +13,12 @@
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
+
+.chartContainer {
+  .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+}

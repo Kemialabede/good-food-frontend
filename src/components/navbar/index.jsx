@@ -19,10 +19,10 @@ const Navbar = () => {
       <div className={styles.nav_container__profile}>
         <div>
           <Image
-            src="/icons/Emoticon.svg"
+            src="/icons/Emoticon.png"
             alt="emoticon"
-            width={15}
-            height={13}
+            width={25}
+            height={25}
           />
         </div>
         <div>

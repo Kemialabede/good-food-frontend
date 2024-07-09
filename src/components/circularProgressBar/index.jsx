@@ -1,15 +1,25 @@
 import React from 'react';
 import styles from './CircularProgressBar.module.scss';
 
-const CircularProgressBar = ({ percentage, color, size, label }) => {
-  const strokeWidth = 10; // You can adjust this value as needed
+const CircularProgressBar = ({
+  percentage,
+  color,
+  size,
+  label,
+  innerHeight,
+  innerWidth,
+}) => {
+  const strokeWidth = 3; // You can adjust this value as needed
   const center = size / 2;
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - (percentage / 100) * circumference;
 
   return (
-    <div className={styles.progressCircle} style={{ width: size, height: size }}>
+    <div
+      className={styles.progressCircle}
+      style={{ width: size, height: size }}
+    >
       <svg width={size} height={size}>
         <circle
           className={styles.backgroundCircle}
@@ -32,12 +42,13 @@ const CircularProgressBar = ({ percentage, color, size, label }) => {
       <div
         className={styles.innerCircle}
         style={{
-          width: size - strokeWidth * 2,
-          height: size - strokeWidth * 2,
-          backgroundColor: 'white',
+          width: innerWidth,
+          height: innerHeight,
+          backgroundColor: color,
+          color: 'white',
         }}
       >
-        <div className={styles.progressText} style={{ color }}>
+        <div className={styles.progressText} style={{ color: 'white' }}>
           <span>{percentage}%</span>
           <p>{label}</p>
         </div>
